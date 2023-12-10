@@ -7,7 +7,9 @@ export default function App(){
     <div>
       <Navbar/>
 
-      <div className="h-screen bg-slate-100">
+      <div className="min-h-screen px-40 pt-24 bg-slate-300">
+        <Card/>
+        <Card/>
         <Card/>
       </div>
 
