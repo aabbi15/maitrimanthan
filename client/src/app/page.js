@@ -1,5 +1,8 @@
 export default function App(){
   return(
-    hi
+    <body>
+      hi
+    </body>
+    
   )
 }
