@@ -1,8 +1,10 @@
+import Navbar, { ComplexNavbar } from "./components/header";
+
 export default function App(){
   return(
-    <body>
-      hi
-    </body>
+    <div>
+      <Navbar/>
+    </div>
     
   )
 }
