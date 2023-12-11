@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function Card(){
     return(
-        <div className="mb-10">
+        <div className="pb-10">
             
 
 <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:w-full hover:bg-gray-100 justify-center ">
