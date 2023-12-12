@@ -1,5 +1,5 @@
 // import React from "react";
-
+import Image from "next/image"
 // import {
 //   Navbar,
 //   MobileNav,
@@ -284,7 +284,13 @@ export default function Navbar(){
 <nav class="bg-white dark:bg-gray-900  w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo"/>
+  <Image
+      src="/images/maitrimanthan.png"
+      width={50}
+      height={300}
+      alt="Picture of the author"
+      className="rounded-lg"
+    />
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">MaitriManthan</span>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
