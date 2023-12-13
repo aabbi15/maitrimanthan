@@ -8,7 +8,7 @@ export default function App(){
     <div>
       <Navbar/>
 
-      <div className="min-h-screen px-40 pt-24 bg-slate-300">
+      <div className="min-h-screen px-40 pt-24 bg-gray-900">
         <Card/>
         <Card/>
         <Card/>
