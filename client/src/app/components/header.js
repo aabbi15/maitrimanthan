@@ -58,9 +58,9 @@ function App() {
  const [isOpen, setIsOpen] = useState(false);
 
  return (
-   <nav className="flex items-center justify-between flex-wrap p-6 border-b border-gray-200 dark:border-gray-600">
+   <nav className="flex items-center bg-black justify-between flex-wrap p-6 border-b border-gray-200 dark:border-gray-600 ">
      <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72">
-     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse ml-5">
      <Image
       src="/images/maitrimanthan.png"
       width={50}
@@ -92,9 +92,9 @@ function App() {
        </button>
      </div>
      <div
-       className={`w-full block flex-grow md:flex md:items-center md:w-auto ${isOpen ? "block" : "hidden"}`}
+       className={`w-full block flex-grow md:ml-36 md:flex md:items-center md:w-auto ${isOpen ? "block" : "hidden"}`}
      >
-       <div className="text-sm md:flex-grow">
+       <div className="text-base md:flex-grow">
        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
       <li>
         <a href="/" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
@@ -111,7 +111,7 @@ function App() {
      </ul>
        </div>
        <div>
-       <button class="px-4 py-3 mt-4 md:mt-0 md:px-0 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500">Get Started</button>
+       <button class="px-7 py-2 mt-4 md:mt-0 md:mr-5 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500">Login</button>
            
        </div>
      </div>

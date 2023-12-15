@@ -9,11 +9,11 @@ import { TypeAnimation } from "react-type-animation";
 export default function Home ()
 {
     return (
-    <div>
+    <div className="bg-gray-900">
         <Navbar/>
    
 
-<div class="container max-w-screen-xl mx-auto px-4">
+<div class="container max-w-screen-xl mx-auto px-4 bg-gray-900">
 
    
 

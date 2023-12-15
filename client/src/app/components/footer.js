@@ -1,7 +1,7 @@
 export default function Footer () {
     return(
        
-<footer class="relative bg-gray-900 pt-8 pb-6 border-t border-gray-200 dark:border-gray-600">
+<footer class="relative bg-black pt-8 pb-6 border-t border-gray-200 dark:border-gray-600">
   <div class="container mx-auto px-4">
     <div class="flex flex-wrap text-left lg:text-left">
       <div class="w-full lg:w-6/12 px-4">
