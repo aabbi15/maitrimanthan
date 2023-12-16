@@ -10,7 +10,7 @@ export async function POST(request){
     try {
 
         const reqBody = await request.json()
-        const {email, password} = reqBody;
+        const { email, password} = reqBody;
         console.log(reqBody);
 
         //check if user exists
@@ -35,7 +35,7 @@ export async function POST(request){
             email: user.email
         }
         //create token
-        const token = await jwt.sign(tokenData, process.env.TOKEN_SECRET, {expiresIn: "1d"})
+        const token = await jwt.sign(tokenData, process.env.TOKEN_SECRET, {expiresIn: "100d"})
 
         const response = NextResponse.json({
             message: "Login successful",
