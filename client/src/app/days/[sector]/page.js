@@ -5,6 +5,9 @@ import Daycard from "@/app/components/daycard";
 import Footer from "../../components/footer";
 import Navbar, { ComplexNavbar } from "../../components/header";
 import { useParams } from "next/navigation";
+import Daycard1 from "@/app/components/daycard";
+import Daycard2 from "@/app/components/ daycard2";
+import Daycard3 from "@/app/components/daycard3";
 
 export default function App(){
     const params=useParams();
@@ -22,9 +25,9 @@ export default function App(){
         <h1 className="mb-10 text-5xl font-bold text-center text-green-600">{mysector}</h1>
         <div className="flex">
 
-        <Daycard/>
-        <Daycard/>
-        <Daycard/>
+        <Daycard1/>
+        <Daycard2/>
+        <Daycard3/>
 
 
 
