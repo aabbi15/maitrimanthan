@@ -40,7 +40,7 @@ export default function Home ()
 
             <p class="font-light text-gray-400 text-md md:text-lg leading-normal mb-12">We provide Internships for peoples of <br/> nationwide to support people who are in need.</p>
 
-            <button class="px-6 py-4 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500">Get started</button>
+            <a href='http://localhost:3000/signup'><button class="px-6 py-4 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500">Get started</button></a>
         </div>
 
         <div class="mt-24">

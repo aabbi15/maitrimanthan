@@ -111,7 +111,7 @@ function App() {
      </ul>
        </div>
        <div>
-       <button class="px-7 py-2 mt-4 md:mt-0 md:mr-5 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500">Login</button>
+       <a href='http://localhost:3000/login'><button class="px-7 py-2 mt-4 md:mt-0 md:mr-5 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500">Login</button></a>
            
        </div>
      </div>

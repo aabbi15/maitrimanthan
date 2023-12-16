@@ -16,7 +16,7 @@ export default function Page() {
             <Navbar/>
             <div className="border-b-8 border-gray-400 border-double">
     <div className='flex items-center justify-center font-semibold p-4 text-5xl text-white '>
-        Contact me
+        Contact Us
     </div>
 </div>
 <div className="container my-12 mx-auto md:px-6 bg-gray-900">
