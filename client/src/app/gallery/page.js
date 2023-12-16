@@ -15,7 +15,7 @@ export default function Page() {
         <div className=" rounded-lg   bg-gray-900 shadow-black/20 md: md:  backdrop-blur-[30px]">
             <Navbar/>
             <div className="  border-b-8 border-gray-400 border-double">
-                    <div className='flex object-center justify-center font-semibold p-4 text-5xl text-green-200 underline '  > Gallery</div>
+                    <div className='flex object-center justify-center font-semibold p-4 text-5xl text-white-200 '  > Gallery</div>
                 </div>
            <div className='my-20'>
             

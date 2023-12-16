@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 
-export default function Card1(){
+export default function Card3(){
     return(
         <div className="pb-10">
             
@@ -10,14 +10,14 @@ export default function Card1(){
 
         <div class="flex flex-col justify-between p-4 leading-normal ">
         <Image
-      src="/images/healthcare.jpeg"
+      src="/images/education.jpeg"
       width={700}
       height={300}
       alt="Picture of the author"
       className="rounded-lg"
     />
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-100  mt-5">Contribute to Healthcare Sector</h5>
-        <p class="mb-3 font-normal text-slate-100 ">Caring for Tomorrow: Contribute to the Healthcare Sector</p>
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-100  mt-5">Contribute to Education Sector</h5>
+        <p class="mb-3 font-normal text-slate-100 ">Empowering Futures: Contribute to the Education Sector</p>
     </div>
 </a>
 </div>
