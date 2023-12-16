@@ -5,14 +5,19 @@ import { useState } from 'react';
 import '../globals.css'
 import Navbar from '../components/header';
 import Footer from '../components/footer';
+import { useRouter } from 'next/navigation';
+import React from 'react';
 
 
 
 export default  function Page(){
-    const [name,Setname] = useState('');
-    const [email,Setemail] = useState('');
-    const [password,Setpassword] = useState('');
-    const[sendalert,Setsendalert] = useState('');
+  const router = useRouter();
+  const [user, setUser] = React.useState({
+      email: "",
+      password: "",
+      username: "",
+  })
+  let sendalert = 'welcome';
     const alert = () => {
 
       if(sendalert)
@@ -35,49 +40,28 @@ export default  function Page(){
       }
     }
 
-    // async function handleSignup(){
-    //   const user = {
-    //     name:name,
-    //     email:email,
-    //     password:password
-    //   }
-       
-    //   fetch ("http://localhost:5173/signup", {
-    //     method: 'POST',
-    //     headers: {'Content-Type': 'application/json'},
-    //     body: JSON.stringify(user)
-    //   }).then(
-    //     (response) => {
-    //      return response.json();
-        
-    //     }).then(data => {
-    //       if(data.status!=200){
-    //         Setsendalert(data.msg);
-    //        }
-    //        else{
-    //         Setsendalert('');
-            
-    //        }
-    //       if(data.url) {
-    //         console.log(data.url);
-    //         window.location.replace(data.url);
-    //        }
-    //       }
-    //     ).catch(
-    //     err=>{
-    //       console.log(err.msg);
-    //     }
-    //   )
-    // }
+    const onSignup = async () => {
+      try {
+          const response = await axios.post("/api/signup", user);
+          console.log("Signup success", response.data);
+          router.push("/login");
+          
+      } catch (error) {
+          console.log("Signup failed", error.message);
+          
+          toast.error(error.message);
+      }finally {
+          // setLoading(false);
+          console.log("hi")
+      }
+  }
 
-    function handleSignup(){
-        console.log('hi');
-    }
+   
     return (
         <>
         <Navbar/>
 
-        <div className="bg-gray-50 dark:bg-gray-500">
+        <div className="bg-gray-50 dark:bg-gray-900">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
     
       <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -88,19 +72,31 @@ export default  function Page(){
               <form className="space-y-4 md:space-y-6" action="#">
                 <div>
                       <label  className="input-label">Your name</label>
-                      <input  value={name} onChange={(e) => Setname(e.target.value)} type="name" name="name" id="name" className="input-box" placeholder="Full Name" required=""/>
+                      <input   id="username"
+            type="text"
+            value={user.username}
+            onChange={(e) => setUser({...user, username: e.target.value})}
+            placeholder="username" className="input-box"  required=""/>
                   </div>
                   <div>
                       <label  className="input-label">Your email</label>
-                      <input value={email} onChange={(e) => Setemail(e.target.value)} type="email" name="email" id="email" className="input-box" placeholder="name@company.com" required=""/>
+                      <input  id="email"
+            type="text"
+            value={user.email}
+            onChange={(e) => setUser({...user, email: e.target.value})}
+            placeholder="email" className="input-box" required=""/>
                   </div>
                   <div>
                       <label  className="input-label">Password</label>
-                      <input value={password} onChange={(e) => Setpassword(e.target.value)} type="password" name="password" id="password" placeholder="••••••••" className="input-box" required=""/>
+                      <input id="password"
+            type="password"
+            value={user.password}
+            onChange={(e) => setUser({...user, password: e.target.value})}
+             placeholder="••••••••" className="input-box" required=""/>
                   </div>
                   
                   {alert()}
-                  <button type="button" onClick={handleSignup} className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create an account</button>
+                  <button type="button" onClick={onSignup} className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create an account</button>
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                       Already have an account? <a href="/login" className="font-medium text-blue-600 hover:underline dark:text-blue-500">Login here</a>
                   </p>

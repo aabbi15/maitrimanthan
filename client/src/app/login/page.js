@@ -6,13 +6,19 @@ import '../globals.css'
 import {toast } from "react-toastify"; 
 import Navbar from '../components/header';
 import Footer from '../components/footer';
+import { useRouter } from 'next/navigation';
+import React from 'react';
 
 
 export default  function Page(){
     
-    const [email,Setemail] = useState('');
-    const [password,Setpassword] = useState('');
-    const[sendalert,Setsendalert] = useState('');
+  const router = useRouter();
+  const [user, setUser] = React.useState({
+      email: "",
+      password: "",
+     
+  })
+  let sendalert = false;
     const alert = () => {
 
       if(sendalert)
@@ -79,13 +85,25 @@ export default  function Page(){
     //   )
     // }
 
-    function handleLogin(){
-        console.log("hi");
-    }
+    const onLogin = async () => {
+      try {
+          setLoading(true);
+          const response = await axios.post("/api/users/login", user);
+          console.log("Login success", response.data);
+          toast.success("Login success");
+          router.push("/profile");
+      } catch (error) {
+          console.log("Login failed", error.message);
+          toast.error(error.message);
+      } finally{
+      // setLoading(false);
+      console.log("yoyo");
+      }
+  }
     return (
         <>
         <Navbar/>
-        <div className="bg-gray-50 dark:bg-gray-500">
+        <div className="bg-gray-50 dark:bg-gray-900">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
     
       <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -97,15 +115,23 @@ export default  function Page(){
                 
                   <div>
                       <label  className="input-label">Your email</label>
-                      <input value={email} onChange={(e) => Setemail(e.target.value)} type="email" name="email" id="email" className="input-box" placeholder="name@company.com" required=""/>
+                      <input id="email"
+            type="text"
+            value={user.email}
+            onChange={(e) => setUser({...user, email: e.target.value})}
+            placeholder="email" className="input-box"  required=""/>
                   </div>
                   <div>
                       <label  className="input-label" >Password</label>
-                      <input value={password} onChange={(e) => Setpassword(e.target.value)} type="password" name="password" id="password" placeholder="••••••••" className="input-box" required=""/>
+                      <input  id="password"
+            type="password"
+            value={user.password}
+            onChange={(e) => setUser({...user, password: e.target.value})}
+            placeholder="••••••••" className="input-box" required=""/>
                   </div>
                   {alert()}
                   
-                  <button  type ="button" onClick={handleLogin} className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Login Now</button>
+                  <button  type ="button" onClick={onLogin} className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Login Now</button>
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                       New to CodeAbhi? <a href="/signup" className="font-medium text-blue-600 hover:underline dark:text-blue-500">Create an account here</a>
                   </p>
