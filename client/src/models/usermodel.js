@@ -3,7 +3,8 @@ import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 
 const userSchema = new Schema({
-  name: String,
+    name: { type: String, required: true },
+  
   email: String,
   password: String,
   coursesEnrolled: [{ type: Number }],
@@ -14,5 +15,5 @@ const userSchema = new Schema({
   timestamps: true, 
 });
 
-const User = model('User', userSchema); 
+const User =mongoose.models.User || model('User', userSchema); 
 export default User;

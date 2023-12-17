@@ -18,10 +18,10 @@ export default function App(){
 
     const mysector = capitalizeString(params.sector)
   return(
-    <div>
+    <div className="bg-gray-900">
       <Navbar/>
 
-      <div className="   px-5 md:px-20 lg:px-40 py-24 bg-slate-300">
+      <div className="   px-5 md:px-20 lg:px-40 py-24 ">
         <h1 className="mb-10 text-5xl font-bold text-center text-green-600">{mysector}</h1>
         <div className="flex">
 
