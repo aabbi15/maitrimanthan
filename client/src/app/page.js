@@ -13,14 +13,14 @@ export default function Home ()
         <Navbar/>
    
 
-<div class="container max-w-screen-xl mx-auto px-4 bg-gray-900">
+<div className="container max-w-screen-xl mx-auto px-4 bg-gray-900">
 
    
 
-    <div class="flex flex-col lg:flex-row justify-between space-x-20">
-        <div class="text-center lg:text-left mt-40">
-            <h1 class="font-semibold text-white-900 text-3xl md:text-5xl leading-normal mb-5"> Intern with purpose, <br/> shape tomorrow.</h1>
-            {/* <h1 class="font-semibold text-white-900 text-3xl md:text-6xl leading-normal mb-6">Charity for the <br/> 
+    <div className="flex flex-col lg:flex-row justify-between space-x-20">
+        <div className="text-center lg:text-left mt-40">
+            <h1 className="font-semibold text-white-900 text-3xl md:text-5xl leading-normal mb-5"> Intern with purpose, <br/> shape tomorrow.</h1>
+            {/* <h1 className="font-semibold text-white-900 text-3xl md:text-6xl leading-normal mb-6">Charity for the <br/> 
             <TypeAnimation
               sequence={[
                 "Abhishek",
@@ -38,12 +38,12 @@ export default function Home ()
             />
             </h1> */}
 
-            <p class="font-light text-gray-400 text-md md:text-lg leading-normal mb-12">We provide Internships for peoples of <br/> nationwide to support people who are in need.</p>
+            <p className="font-light text-gray-400 text-md md:text-lg leading-normal mb-12">We provide Internships for peoples of <br/> nationwide to support people who are in need.</p>
 
-            <a href='http://localhost:3000/signup'><button class="px-6 py-4 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500">Get started</button></a>
+            <a href='http://localhost:3000/signup'><button className="px-6 py-4 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500">Get started</button></a>
         </div>
 
-        <div class="mt-24">
+        <div className="mt-24">
             <img src="/images/home-img.png" alt="Image"/>
         </div>
     </div>

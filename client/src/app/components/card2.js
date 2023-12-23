@@ -6,9 +6,9 @@ export default function Card2(){
         <div className="pb-10">
             
 
-<a href="http://localhost:3000/days/environment" class="flex flex-col items-center bg-gray-800 border border-gray-200 rounded-lg shadow md:flex-row md:w-full hover:bg-gray-900 justify-center ">
+<a href="http://localhost:3000/days/environment" className="flex flex-col items-center bg-gray-800 border border-gray-200 rounded-lg shadow md:flex-row md:w-full hover:bg-gray-900 justify-center ">
 
-        <div class="flex flex-col justify-between p-4 leading-normal ">
+        <div className="flex flex-col justify-between p-4 leading-normal ">
         <Image
       src="/images/environmentsector.jpeg"
       width={700}
@@ -16,8 +16,8 @@ export default function Card2(){
       alt="Picture of the author"
       className="rounded-lg"
     />
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-100  mt-5">Contribute to Environment Sector</h5>
-        <p class="mb-3 font-normal text-slate-100 ">Taking Action: Contributing Meaningfully to the Environment</p>
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-slate-100  mt-5">Contribute to Environment Sector</h5>
+        <p className="mb-3 font-normal text-slate-100 ">Taking Action: Contributing Meaningfully to the Environment</p>
     </div>
 </a>
 </div>

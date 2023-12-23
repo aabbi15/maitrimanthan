@@ -7,6 +7,7 @@ import Navbar from '../components/header';
 import Footer from '../components/footer';
 import { useRouter } from 'next/navigation';
 import React from 'react';
+import axios from 'axios';
 
 
 
@@ -15,7 +16,7 @@ export default  function Page(){
   const [user, setUser] = React.useState({
       email: "",
       password: "",
-      username: "",
+      name: "",
   })
   let sendalert = 'welcome';
     const alert = () => {
@@ -49,7 +50,7 @@ export default  function Page(){
       } catch (error) {
           console.log("Signup failed", error.message);
           
-          toast.error(error.message);
+          // toast.error(error.message);
       }finally {
           // setLoading(false);
           console.log("hi")
@@ -72,11 +73,11 @@ export default  function Page(){
               <form className="space-y-4 md:space-y-6" action="#">
                 <div>
                       <label  className="input-label">Your name</label>
-                      <input   id="username"
+                      <input   id="name"
             type="text"
-            value={user.username}
-            onChange={(e) => setUser({...user, username: e.target.value})}
-            placeholder="username" className="input-box"  required=""/>
+            value={user.name}
+            onChange={(e) => setUser({...user, name: e.target.value})}
+            placeholder="name" className="input-box"  required=""/>
                   </div>
                   <div>
                       <label  className="input-label">Your email</label>

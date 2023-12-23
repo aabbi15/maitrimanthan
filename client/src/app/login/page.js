@@ -8,6 +8,7 @@ import Navbar from '../components/header';
 import Footer from '../components/footer';
 import { useRouter } from 'next/navigation';
 import React from 'react';
+import axios from 'axios';
 
 
 export default  function Page(){
@@ -87,11 +88,11 @@ export default  function Page(){
 
     const onLogin = async () => {
       try {
-          setLoading(true);
-          const response = await axios.post("/api/users/login", user);
+          // setLoading(true);
+          const response = await axios.post("/api/login", user);
           console.log("Login success", response.data);
           toast.success("Login success");
-          router.push("/profile");
+          router.push("/sector");
       } catch (error) {
           console.log("Login failed", error.message);
           toast.error(error.message);
