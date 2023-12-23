@@ -95,7 +95,7 @@ export default  function Page(){
           router.push("/sector");
       } catch (error) {
           console.log("Login failed", error.message);
-          toast.error(error.message);
+          // toast.error(error.message);
       } finally{
       // setLoading(false);
       console.log("yoyo");
