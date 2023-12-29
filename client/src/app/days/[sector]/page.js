@@ -23,7 +23,7 @@ export default function App(){
 
       <div className="   px-5 md:px-20 lg:px-40 py-24 ">
         <h1 className="mb-10 text-5xl font-bold text-center text-green-600">{mysector}</h1>
-        <div className="flex">
+        <div className="md:flex flex flex-col items-center gap-10">
 
         <Daycard1/>
         <Daycard2/>

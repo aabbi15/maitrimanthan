@@ -3,6 +3,34 @@ const courses = [
         id: 1001,
         sector: "Education",
         duration: "1 week",
+        description: "Welcome to contributing to education",
+        tasks: [
+            {
+                number:1,
+                title:"This is a Task ",
+                description:" this is description of the task",
+                credits: 70,
+            },
+            {
+                number:1,
+                title:"This is a Task ",
+                description:" this is description of the task",
+                credits: 70,
+            },
+            {
+                number:1,
+                title:"This is a Task ",
+                description:" this is description of the task",
+                credits: 70,
+            },
+            {
+                number:1,
+                title:"This is a Task ",
+                description:" this is description of the task",
+                credits: 70,
+            },
+            
+        ]
     },
     {
         id: 1002,

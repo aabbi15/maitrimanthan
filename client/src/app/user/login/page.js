@@ -2,10 +2,10 @@
 import { useState } from 'react';
 
 
-import '../globals.css'
+import '../../globals.css'
 import {toast } from "react-toastify"; 
-import Navbar from '../components/header';
-import Footer from '../components/footer';
+import Navbar from '../../components/header';
+import Footer from '../../components/footer';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import axios from 'axios';
@@ -19,10 +19,10 @@ export default  function Page(){
       password: "",
      
   })
-  let sendalert = false;
+  const [alertmsg, setalertmsg] = React.useState('');
     const alert = () => {
 
-      if(sendalert)
+      if(alertmsg)
       {return(
         <div className="flex items-center p-4 mb-4 text-sm text-yellow-800 border border-yellow-300 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300 dark:border-yellow-800" role="alert">
         <svg className="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -30,7 +30,7 @@ export default  function Page(){
         </svg>
         <span className="sr-only">Info</span>
         <div>
-          <span className="font-medium">Warning alert!</span> {sendalert}
+          <span className="font-medium">Warning alert! {alertmsg}</span> 
         </div>
       </div>
       );
@@ -53,7 +53,7 @@ export default  function Page(){
 
 
        
-    //   fetch ("http://localhost:5173/login", {
+    //   fetch ("http://localhost:5173/user/login", {
         
     //     method: 'POST',
     //     headers: {'Content-Type': 'application/json',},
@@ -89,17 +89,18 @@ export default  function Page(){
     const onLogin = async () => {
       try {
           // setLoading(true);
-          const response = await axios.post("/api/login", user);
+          const response = await axios.post("/api/user/login", user);
           console.log("Login success", response.data);
           toast.success("Login success");
           router.push("/sector");
       } catch (error) {
+
           console.log("Login failed", error.message);
+          if(error.response.status==400) setalertmsg('user does not exists')
+          if(error.response.status==401) setalertmsg('Invalid username or password')
+          else setalertmsg('missing input');
           // toast.error(error.message);
-      } finally{
-      // setLoading(false);
-      console.log("yoyo");
-      }
+      } 
   }
     return (
         <>
@@ -134,7 +135,7 @@ export default  function Page(){
                   
                   <button  type ="button" onClick={onLogin} className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Login Now</button>
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                      New to CodeAbhi? <a href="/signup" className="font-medium text-blue-600 hover:underline dark:text-blue-500">Create an account here</a>
+                      New to CodeAbhi? <a href="/user/signup" className="font-medium text-blue-600 hover:underline dark:text-blue-500">Create an account here</a>
                   </p>
                  
               </form>

@@ -16,6 +16,8 @@ export async function POST(request){
 
         console.log(reqBody);
 
+        
+
         //check if user already exists
         const user = await User.findOne({email})
         console.log("1")
@@ -55,8 +57,9 @@ export async function POST(request){
 
 
     } catch (error) {
+        
         console.log(error)
-        return NextResponse.json({error: error.message}, {status: 500})
+        return NextResponse.json({error: "Missing input"}, {status: 500})
 
     }
 }

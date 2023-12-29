@@ -22,10 +22,10 @@ export async function GET(request){
             return NextResponse.json({ error: "Token not found" }, { status: 401 });
           }
 
-        console.log(token)
+        // console.log(token)
           const decodedToken = jwt.verify(token0.value, process.env.TOKEN_SECRET);
 
-          console.log(2)
+          // console.log(2)
 
           const user = await User.findById(decodedToken.id);
 
@@ -33,12 +33,13 @@ export async function GET(request){
           if (!user) {
             return NextResponse.json({ error: "User not found" }, { status: 404 });
           }
-          console.log(2)
-
+          // console.log(2)
+          console.log(user.name + 'details sent')
           // Return user information in the response
           return NextResponse.json({
             name: user.name,
             email: user.email,
+            createdAt: user.createdAt
           });
        
 

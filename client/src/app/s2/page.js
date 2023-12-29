@@ -21,9 +21,9 @@ export default function SignupPage() {
     const onSignup = async () => {
         try {
             setLoading(true);
-            const response = await axios.post("/api/users/signup", user);
+            const response = await axios.post("/api/users/user/signup", user);
             console.log("Signup success", response.data);
-            router.push("/login");
+            router.push("/user/login");
             
         } catch (error) {
             console.log("Signup failed", error.message);
@@ -77,7 +77,7 @@ export default function SignupPage() {
             <button
             onClick={onSignup}
             className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">{buttonDisabled ? "No signup" : "Signup"}</button>
-            <Link href="/login">Visit login page</Link>
+            <Link href="/user/login">Visit login page</Link>
         </div>
     )
 

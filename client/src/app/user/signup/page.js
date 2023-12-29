@@ -2,9 +2,9 @@
 import { useState } from 'react';
 
 
-import '../globals.css'
-import Navbar from '../components/header';
-import Footer from '../components/footer';
+import '../../globals.css'
+import Navbar from '../../components/header';
+import Footer from '../../components/footer';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import axios from 'axios';
@@ -18,10 +18,10 @@ export default  function Page(){
       password: "",
       name: "",
   })
-  let sendalert = 'welcome';
+  const [alertmsg, setalertmsg] = React.useState('');
     const alert = () => {
 
-      if(sendalert)
+      if(alertmsg)
       {return(
         <div className="flex items-center p-4 mb-4 text-sm text-yellow-800 border border-yellow-300 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300 dark:border-yellow-800" role="alert">
         <svg className="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -29,7 +29,7 @@ export default  function Page(){
         </svg>
         <span className="sr-only">Info</span>
         <div>
-          <span className="font-medium">Warning alert!</span> {sendalert}
+          <span className="font-medium">Warning alert! {alertmsg}</span> 
         </div>
       </div>
       );
@@ -43,17 +43,19 @@ export default  function Page(){
 
     const onSignup = async () => {
       try {
-          const response = await axios.post("/api/signup", user);
+         
+          const response = await axios.post("/api/user/signup", user);
+          
           console.log("Signup success", response.data);
-          router.push("/login");
+          router.push("/user/login");
           
       } catch (error) {
+        console.log(error);
           console.log("Signup failed", error.message);
+          if(error.response.status==400) setalertmsg('user already exists')
+          else setalertmsg('missing input');
           
           // toast.error(error.message);
-      }finally {
-          // setLoading(false);
-          console.log("hi")
       }
   }
 
@@ -99,7 +101,7 @@ export default  function Page(){
                   {alert()}
                   <button type="button" onClick={onSignup} className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create an account</button>
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Already have an account? <a href="/login" className="font-medium text-blue-600 hover:underline dark:text-blue-500">Login here</a>
+                      Already have an account? <a href="/user/login" className="font-medium text-blue-600 hover:underline dark:text-blue-500">Login here</a>
                   </p>
               </form>
           </div>

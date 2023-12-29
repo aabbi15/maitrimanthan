@@ -63,7 +63,7 @@ import axios from 'axios';
  useEffect(() => {
   const fetchData = async () => {
     try {
-      const response2 = await axios.get("/api/me");
+      const response2 = await axios.get("/api/user/me");
       const response = response2.data;
       console.log(response);
       Setislogged(true);
@@ -84,11 +84,11 @@ import axios from 'axios';
  function Profile() {
      if (islogged) {
          return (
-             <a href='\profile' className='flex justify-center items-center'>
+             <a href='/user/profile' className='flex justify-center items-center'>
                  
 
                      <Image
-                         src='/images/instagram.png'
+                         src='/images/user.png'
                          alt="Picture of the author"
                          className="w-11 h-11 bg-slate-700 rounded-l-full p-2 "
                          width={32}
@@ -103,7 +103,7 @@ import axios from 'axios';
      else {
          return (
           <div>
-          <a href='http://localhost:3000/login'><button className="px-7 py-2 mt-4 md:mt-0 md:mr-5 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500">Login</button></a>
+          <a href='http://localhost:3000/user/login'><button className="px-7 py-2 mt-4 md:mt-0 md:mr-5 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500">Login</button></a>
               
           </div>
          )
