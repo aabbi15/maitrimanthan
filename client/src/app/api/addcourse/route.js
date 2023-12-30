@@ -12,14 +12,14 @@ export async function POST(request){
     try {
 
         const reqBody = await request.json()
-        const { course } = reqBody;
-        console.log(reqBody);
+        const { courseid } = reqBody;
+        console.log(courseid);
 
         const id = getid(request);
 
 
         if (!id) {
-            return NextResponse.json({ error: "Token not found" }, { status: 401 });
+            return NextResponse.json({ error: "Token not found" }, { status: 409 });
           }
 
         
@@ -32,8 +32,8 @@ export async function POST(request){
             return NextResponse.json({ error: "User not found" }, { status: 404 });
           }
 
-          if (!user.coursesEnrolled.includes(course) && !user.coursesFinished.includes(course)) {
-            user.coursesEnrolled.push(course);
+          if (!user.coursesEnrolled.includes(courseid) && !user.coursesFinished.includes(courseid)) {
+            user.coursesEnrolled.push(courseid);
       
             // Save the updated user with the new course
             await user.save();

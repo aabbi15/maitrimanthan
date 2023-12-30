@@ -8,8 +8,10 @@ import Footer from "../components/footer";
 import Navbar, { ComplexNavbar } from "../components/header";
 import courses from '../../data/courses'
 import { useState, useEffect } from "react";
+import axios from "axios";
 
-export default async function App(){
+
+export default  function App(){
     const [myid, Setmyid] = useState([]);
     const [islogged, Setislogged] = useState(false);
    
@@ -18,7 +20,7 @@ export default async function App(){
        try {
          const response2 = await axios.get("/api/getcourseinfo");
          const response = response2.data;
-         console.log(response);
+         console.log(response+"tatat");
          Setmyid(response.coursesEnrolled);
        } catch (error) {
          console.log("Auth failed", error.message);

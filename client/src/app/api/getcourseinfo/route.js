@@ -16,6 +16,7 @@ export async function GET(request){
         // console.log(reqBody);
 
         const id = getid(request);
+        console.log(id + "Hello")
 
 
         if (!id) {
