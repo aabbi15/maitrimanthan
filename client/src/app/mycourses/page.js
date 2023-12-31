@@ -1,8 +1,5 @@
 'use client'
-import Card2 from "../components/card2";
-import Card3 from "../components/card3";
-import Card1 from "../components/cards";
-import Card from "../components/cards";
+
 import MyCard from "../components/enrolledcard";
 import Footer from "../components/footer";
 import Navbar, { ComplexNavbar } from "../components/header";
@@ -20,7 +17,7 @@ export default  function App(){
        try {
          const response2 = await axios.get("/api/getcourseinfo");
          const response = response2.data;
-         console.log(response+"tatat");
+        //  console.log(response.coursesEnrolled + response.coursesFinished);
          Setmyid(response.coursesEnrolled);
        } catch (error) {
          console.log("Auth failed", error.message);
@@ -33,6 +30,10 @@ export default  function App(){
 
 
 function MyCourses(){
+  console.log(myid);
+  const mycourses = courses.filter((course) => myid.includes(course.id));
+  console.log(mycourses)
+
     if(myid.length==0){
     return(
         <h1>No courses Enrolled</h1>
@@ -42,8 +43,11 @@ function MyCourses(){
         return(
            <div>
 
-        {myid.map(id => (
-        <MyCard key={id} myid={id} />        
+        {mycourses.map(mycourse => (
+          <>
+          
+        <MyCard mycourse={mycourse} />   
+        </>     
         ))}
            </div>
         )
