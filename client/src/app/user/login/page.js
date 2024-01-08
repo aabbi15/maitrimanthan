@@ -96,9 +96,9 @@ export default  function Page(){
       } catch (error) {
 
           console.log("Login failed", error.message);
-          if(error.response.status==400) setalertmsg('user does not exists')
-          if(error.response.status==401) setalertmsg('Invalid username or password')
-          else setalertmsg('missing input');
+          if(error.response.status==400) setalertmsg('user does not exists');
+          if(error.response.status==401) setalertmsg('Invalid username or password');
+          else setalertmsg('Error');
           // toast.error(error.message);
       } 
   }
