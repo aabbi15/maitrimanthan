@@ -53,6 +53,7 @@ export default  function Page(){
         console.log(error);
           console.log("Signup failed", error.message);
           if(error.response.status==400) setalertmsg('user already exists')
+          if(error.response.status==409) setalertmsg('Invalid email')
           else setalertmsg('missing input');
           
           // toast.error(error.message);

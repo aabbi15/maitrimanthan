@@ -89,10 +89,12 @@ async function OnJoin () {
         <div class='flex justify-between items-center ml-3'>
             <span>Google Form</span>
             <button class='flex items-center justify-center text-xs font-medium rounded-full px-4 py-1 space-x-1 border-2 border-black bg-white hover:bg-black hover:text-white text-black dark:bg-slate-800 dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'>
+            <a href="https://forms.gle/NojXAxvePHSf2fmB9">
             <span>Go</span>
             <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
                 <path d='M5 12h13M12 5l7 7-7 7' />
             </svg>
+            </a>
             </button>
         </div>
     </div>
@@ -131,10 +133,12 @@ async function OnJoin () {
         <div class='flex justify-between items-center ml-3'>
             <span>Google Form</span>
             <button class='flex items-center justify-center text-xs font-medium rounded-full px-4 py-1 space-x-1 border-2 border-black bg-white hover:bg-black hover:text-white text-black dark:bg-slate-800 dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'>
+            <a href="https://forms.gle/38GuEW5NGaq4o98s8">
             <span>Visit</span>
             <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
                 <path d='M5 12h13M12 5l7 7-7 7' />
             </svg>
+            </a>
             </button>
         </div>
     </div>

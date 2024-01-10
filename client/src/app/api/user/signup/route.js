@@ -2,11 +2,11 @@ import {connect} from "@/dbconfig/dbconfig";
 import User from "@/models/usermodel";
 import { NextRequest, NextResponse } from "next/server";
 import bcryptjs from "bcryptjs";
+import zod from "zod";
 
 connect();
 
-
-
+const myschema = zod.string().email();
 export async function POST(request){
     
 
@@ -15,6 +15,11 @@ export async function POST(request){
         const {name, email, password} = reqBody
 
         console.log(reqBody);
+        try{
+            myschema.parse(email)
+        }catch(error){
+            return NextResponse.json({error: "Invalid email"}, {status: 409})
+        }
 
         
 
