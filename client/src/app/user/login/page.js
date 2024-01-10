@@ -42,49 +42,7 @@ export default  function Page(){
       }
     }
 
-    // async function handleLogin(){
-      
-
-    //   const user = {
-        
-    //     email:email,
-    //     password:password
-    //   }
-
-
-       
-    //   fetch ("http://localhost:5173/user/login", {
-        
-    //     method: 'POST',
-    //     headers: {'Content-Type': 'application/json',},
-    //     body: JSON.stringify(user),
-    //     withCredentials: true,
-    //     credentials: 'include',
-    //   }).then(
-    //     (response) => {
-        
-    //      return response.json();
-         
-        
-    //     }).then(data => {
-    //       if(data.status!=200){
-    //         Setsendalert(data.msg);
-    //        }
-    //        else{
-    //         Setsendalert('');
-            
-    //        }
-          
-    //        if(data.url) {
-    //         window.location.replace(data.url);
-    //        }
-    //       })
-    //     .catch(
-    //     err=>{
-    //       console.log(err.msg);
-    //     }
-    //   )
-    // }
+  
 
     const onLogin = async () => {
       try {
