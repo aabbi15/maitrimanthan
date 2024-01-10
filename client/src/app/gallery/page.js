@@ -25,46 +25,46 @@ export default function Page() {
            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
     <div className="grid gap-4">
         <div className=''>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/images/pg" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/images/g.jpg" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt=""/>
-        </div>
-    </div>
-    <div className="grid gap-4">
-        <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt=""/>
-        </div>
-        <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt=""/>
-        </div>
-        <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/images/h.jpg" alt=""/>
         </div>
     </div>
     <div className="grid gap-4">
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/images/i.jpg" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/images/j.jpg" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/images/k.jpg" alt=""/>
         </div>
     </div>
     <div className="grid gap-4">
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/images/a.jpg" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/images/b.jpg" alt=""/>
         </div>
         <div>
-            <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt=""/>
+            <img className="h-auto max-w-full rounded-lg" src="/images/c.jpg" alt=""/>
+        </div>
+    </div>
+    <div className="grid gap-4">
+        <div>
+            <img className="h-auto max-w-full rounded-lg" src="/images/d.jpg" alt=""/>
+        </div>
+        <div>
+            <img className="h-auto max-w-full rounded-lg" src="/images/e.jpg" alt=""/>
+        </div>
+        <div>
+            <img className="h-auto max-w-full rounded-lg" src="/images/f.jpg" alt=""/>
         </div>
     </div>
 </div>
