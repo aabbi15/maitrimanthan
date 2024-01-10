@@ -13,7 +13,7 @@ export default function Footer () {
           <button className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
           <a href="https://twitter.com/maitrimannthan1?lang=en"><img src="/images/twitter.png/"></img></a></button>
             <button className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-              <a href="https://www.instagram.com/maitrimanthan_sansthan/?igshid=YmMyMTA2M2Y%3D"><img src="/images/instagram.webp"></img></a>
+              <a href="https://www.instagram.com/maitrimanthan_sansthan/?igshid=YmMyMTA2M2Y%3D"><img src="/images/instagram.jpeg" className=""></img></a>
             </button>
             <button className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
               <a href="https://www.facebook.com/maitrimanthanudaipur/"><img src="/images/facebook.png"></img></a>
