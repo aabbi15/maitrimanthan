@@ -103,7 +103,7 @@ import axios from 'axios';
      else {
          return (
           <div>
-          <a href='http://localhost:3000/user/login'><button className="px-7 py-2 mt-4 md:mt-0 md:mr-5 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500">Login</button></a>
+          <a href='/user/login'><button className="px-7 py-2 mt-4 md:mt-0 md:mr-5 bg-info font-semibold text-white text-lg rounded-xl hover:bg-blue-700 transition ease-in-out duration-500">Login</button></a>
               
           </div>
          )
