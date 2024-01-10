@@ -6,11 +6,11 @@ export default function Card3(){
         <div className="pb-10">
             
 
-<a href="http://localhost:3000/days/education" className="flex flex-col items-center bg-gray-800 border border-gray-200 rounded-lg shadow md:flex-row md:w-full hover:bg-gray-900 justify-center ">
+<a href="/days/education" className="flex flex-col items-center bg-gray-800 border border-gray-200 rounded-lg shadow md:flex-row md:w-full hover:bg-gray-900 justify-center ">
 
         <div className="flex flex-col justify-between p-4 leading-normal ">
         <Image
-      src="/images/education.jpeg"
+      src="/images/education.jpg"
       width={700}
       height={300}
       alt="Picture of the author"
