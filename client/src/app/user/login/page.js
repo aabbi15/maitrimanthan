@@ -93,7 +93,7 @@ export default  function Page(){
                   
                   <button  type ="button" onClick={onLogin} className="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 ">Login Now</button>
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                      New to CodeAbhi? <a href="/user/signup" className="font-medium text-blue-600 hover:underline dark:text-blue-500">Create an account here</a>
+                      New to Maitri Manthan? <a href="/user/signup" className="font-medium text-blue-600 hover:underline dark:text-blue-500">Create an account here</a>
                   </p>
                  
               </form>

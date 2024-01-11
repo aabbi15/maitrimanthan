@@ -74,7 +74,7 @@ async function OnJoin () {
       <Showtasks/>
   </div>
 
-<div className="flex justify-evenly mt-20">
+<div className="md:flex md:justify-evenly mt-20  ">
 <div class='break-inside relative overflow-hidden flex flex-col justify-between space-y-2 text-sm rounded-xl max-w-[23rem] p-4 mb-4 bg-[#5E17F4] text-white '>
         <span class='uppercase text-sm text-[#D2BDFF] ml-3'>Step 1</span>
         <div class='flex flex-row items-center space-x-3'>
