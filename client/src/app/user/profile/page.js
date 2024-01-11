@@ -28,7 +28,7 @@ export default function Page() {
           } finally {
             // Remove this empty block if you don't need any specific code here
             // setLoading(false);
-            console.log("hi");
+            // console.log("hi");
           }
         };
 

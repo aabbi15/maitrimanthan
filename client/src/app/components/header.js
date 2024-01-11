@@ -74,7 +74,7 @@ import axios from 'axios';
     } finally {
       // Remove this empty block if you don't need any specific code here
       // setLoading(false);
-      console.log("hi");
+      // console.log("hi");
     }
   };
 

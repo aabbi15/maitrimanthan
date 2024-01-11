@@ -12,11 +12,11 @@ export async function GET(request){
         // const reqBody = await request.json()
         // const { email, password} = reqBody;
         // console.log(reqBody);
-      console.log(2)
+      // console.log(2)
         const token0 = request.cookies.get("token");
         const token = JSON.stringify(token0);
 
-        console.log(2)
+        // console.log(2)
 
         if (!token) {
             return NextResponse.json({ error: "Token not found" }, { status: 401 });
