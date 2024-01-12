@@ -11,6 +11,37 @@ import Footer from "@/app/components/footer";
 export default function App(){
 
     const params = useParams();
+    
+    function linker(){
+      switch (params.id) {
+        case '1001': gformlink= 'https://docs.google.com/forms/d/e/1FAIpQLSfmX1ApPlhgrt541PPCtc0YcbfA88C3Lr_ArTeuGG-CpFn1zg/viewform'
+          
+        case '1002': gformlink= 'https://docs.google.com/forms/d/e/1FAIpQLSdnbgp4SEYIAoeo0ke8i-DdvjjoRrl3whZnCKWPSLa8rR6Bbw/viewform';
+
+        case '1003': gformlink= 'https://docs.google.com/forms/d/e/1FAIpQLSeF3kW7--mXnliKugpapd_ZeZrsQv3dt55Q4ReLmvV2sUY4zA/viewform';
+
+        case '2001': gformlink= 'https://docs.google.com/forms/d/e/1FAIpQLSe1WzkrH9IjLyi_nY-gMwXSTqYMmpbBg4yzst1b7OctvdvmMg/viewform';
+
+        case '2003': gformlink= 'https://docs.google.com/forms/d/e/1FAIpQLScN71YZ74T0wNxbzRZFpACcRbJPCoXrrs76bAW61z2oQTy4Qg/viewform';
+
+        case '2002': gformlink= 'https://docs.google.com/forms/d/e/1FAIpQLScN71YZ74T0wNxbzRZFpACcRbJPCoXrrs76bAW61z2oQTy4Qg/viewform';
+
+        case '3001': gformlink= 'https://docs.google.com/forms/d/e/1FAIpQLSeiVbrPAEy-im70DTspwc8lJBB_yhWHEzz-i7Jo5PV8tS5zww/viewform';
+
+        case '3002': gformlink= 'https://docs.google.com/forms/d/e/1FAIpQLSd-cVpoRB-NwxacBJUcgZvO_ybUhY3rvle5tFZpWU515YdsTQ/viewform';
+
+        case '3003': gformlink= 'https://docs.google.com/forms/d/e/1FAIpQLSeJFMu2eC7mc1BtfBXnL5Ofp3_rJ6Hfz_1wpXO8jLTB8cZJTw/viewform';
+      
+        default:  console.log(params.id)
+          break;
+      }
+    }
+
+    let gformlink=''
+    linker();
+
+
+
 
 
 const mycourse = courses.find(element => {if(element.id==params.id) return element})
@@ -89,7 +120,7 @@ async function OnJoin () {
         <div class='flex justify-between items-center ml-3'>
             <span>Google Form</span>
             <button class='flex items-center justify-center text-xs font-medium rounded-full px-4 py-1 space-x-1 border-2 border-black bg-white hover:bg-black hover:text-white text-black dark:bg-slate-800 dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'>
-            <a href="https://forms.gle/NojXAxvePHSf2fmB9">
+            <a href="https://forms.gle/NojXAxvePHSf2fmB9" target='_blank'>
             <span>Go</span>
             <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
                 <path d='M5 12h13M12 5l7 7-7 7' />
@@ -111,12 +142,16 @@ async function OnJoin () {
         </div>
         <div class='flex justify-between items-center ml-3'>
             <span>Google Form</span>
+            <a href ={gformlink} target='_blank'>
             <button class='flex items-center justify-center text-xs font-medium rounded-full px-4 py-1 space-x-1 border-2 border-black bg-white hover:bg-black hover:text-white text-black dark:bg-slate-800 dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'>
+            
             <span>Submit</span>
             <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
                 <path d='M5 12h13M12 5l7 7-7 7' />
             </svg>
+            
             </button>
+            </a>
         </div>
     </div>
     <div class='break-inside relative overflow-hidden flex flex-col justify-between space-y-2 text-sm rounded-xl max-w-[23rem] p-4 mb-4 bg-[#5E17F4] text-white '>
@@ -133,7 +168,7 @@ async function OnJoin () {
         <div class='flex justify-between items-center ml-3'>
             <span>Google Form</span>
             <button class='flex items-center justify-center text-xs font-medium rounded-full px-4 py-1 space-x-1 border-2 border-black bg-white hover:bg-black hover:text-white text-black dark:bg-slate-800 dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'>
-            <a href="https://forms.gle/38GuEW5NGaq4o98s8">
+            <a href="https://forms.gle/38GuEW5NGaq4o98s8" target='_blank'>
             <span>Visit</span>
             <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
                 <path d='M5 12h13M12 5l7 7-7 7' />
