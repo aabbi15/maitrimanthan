@@ -22,12 +22,21 @@ https://maitrimanthan.vercel.app/
 
 ## Table of Contents
 
+- [Screenshots](#screenshots)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Screenshots
+
+![App Screenshot](screenshots/1.png)
+![App Screenshot](screenshots/2.png)
+![App Screenshot](screenshots/3.png)
+![App Screenshot](screenshots/4.png)
+![App Screenshot](screenshots/5.png)
+
 ## Features
 
 
@@ -91,13 +100,7 @@ npm run dev
 
 Open your browser and visit [http://localhost:3000](http://localhost:3000) to view your Next.js website.
 
-## Screenshots
 
-![App Screenshot](screenshots/1.png)
-![App Screenshot](screenshots/2.png)
-![App Screenshot](screenshots/3.png)
-![App Screenshot](screenshots/4.png)
-![App Screenshot](screenshots/5.png)
 
 
 ## Contributing
